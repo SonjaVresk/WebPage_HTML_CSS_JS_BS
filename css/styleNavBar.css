@@ -1,0 +1,73 @@
+.navbar {
+    background-color: rgb(8, 8, 8); /* rgba - a je za transparentnost*/
+}
+
+.navbar-nav {
+    padding: 10px;
+}
+
+.navbar a:hover {
+    color: rgb(255, 230, 0);
+}
+
+.nav-link {
+    color: white;
+    font-family:'Arial Narrow', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 1px 10px 1px;
+}
+
+.nav-about {
+    color: orange;
+}
+
+.signOutLi{
+    display: flex;
+    align-items: center;
+}
+
+#signedIn p{
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-content: center;
+    margin-bottom: 0;
+    margin-right: 5px;
+    margin-left: 10px;
+    font-family:'Arial Narrow', sans-serif;
+}
+
+#signedIn .signedInUser{
+    color:rgba(12, 139, 237, 0.648);
+    font-weight: bold;
+}
+
+#navBarNastavni{
+    display: flex;
+    align-items: center;
+}
+
+.hidden{
+        visibility: hidden;
+        position: absolute;
+}
+
+.navbar-toggler{
+    color:transparent;
+    background-color: rgba(8, 8, 8, 0.6);
+}
+
+/*promijenjena boja toggler-a */
+.custom-toggler{
+    background-color: orange;
+}
+
+/**** Responzivnost CSS ****/
+
+@media (max-width: 750px){
+    .navbar{
+        background-color: black;    
+        width:fit-content; /*promijenjena širine hamburgera ovisno o širini riječi*/                  
+    }    
+}

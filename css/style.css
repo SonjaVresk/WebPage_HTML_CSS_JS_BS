@@ -1,0 +1,370 @@
+
+body {
+    font-family:'Arial Narrow', sans-serif;
+    position: relative; /* relative zbog footera */
+    padding-bottom: 150px;
+    min-height: 100vh;
+}
+
+#startPage {
+    padding-bottom: 0;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+hr {
+    color: orange;  
+}
+
+.h1-about {
+    padding-top: 150px;
+}
+
+.h1-slide{
+    height: 150px;
+    position: relative;
+    text-align: center;
+    display: flex;  /* Da bi naslov bio na sredini, display mora biti flex sa just-cont: center*/
+    justify-content: center;
+}
+
+.h1-box {
+    width: 40%;
+    border-bottom: 2px solid rgb(255, 204, 0);
+    text-align: center;
+    padding-top: 50px;
+    position: absolute; /** Animacija **/
+    animation: pomak-naslova 2s;
+    animation-fill-mode: forwards;
+
+  }
+  
+  @keyframes pomak-naslova {
+    from {top: 50px;}
+    to {top: 0px;}
+  }
+
+.h1-news {
+    height: 200px;
+  }
+.h1-news-box{
+    padding-top: 150px;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px 0px 20px 0px;
+    color: rgb(165, 42, 42);
+}
+
+h4 {
+    border-bottom: 2px solid #ccc;
+}
+
+#video-main-page {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh; /*visina ekrana*/
+}
+
+.video-main-page-display{
+    min-width: 100%; /*prikaz videa će zauzeti 100% širine od div-a video*/
+    min-height: 100vh;
+    z-index: 1;
+}
+
+
+/***** O nama *****/
+
+.handwrite {
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    background-color: rgb(243, 243, 243);
+    padding: 2% 20%;
+    text-align: justify;
+}
+
+.card-box {
+    padding: 3% 3%;
+    text-align: justify;
+    padding-bottom: 0;
+    padding-top: 0px;
+}
+
+.card {
+    font-family: 'Arial Narrow', sans-serif;
+    font-size: 16px;
+    padding: 20px;
+    height: 100%;
+}
+
+.card-brand{
+    border-color: transparent;
+    justify-content: space-between;
+}
+
+.card-brand p{
+    display: flex;
+    justify-content: center;
+}
+.card h3 {
+    font-size: 20px;
+    font-weight: 550;
+    border-bottom: 2px solid #ccc;
+}
+
+.card h4 {
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.about-years{
+    color: steelblue;
+}
+
+.img-header-container{ /*Za pozicioniranje slike*/
+    position: relative;/*Roditelj je relative, a dijete absolute u odnosu na roditelja*/
+    height: 350px;
+}
+
+.img-header-box {
+    height: 350px;
+    width: 100%;
+    position: absolute;
+    bottom: 200px;
+}
+
+.img-header {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /*odreže sliku prema veličini containera, a zadrži dio, ne smanji*/
+    position: relative; /** Animacija slike pomak prema dolje **/
+    animation: pomak 2s;
+    animation-fill-mode: forwards; /*ostaje na završnoj poziciji*/
+    /*object-position: 0 20%;*/    
+  }
+
+ .news-txt-na-slici{
+    position: relative; 
+    animation: pomak 2s;
+    animation-fill-mode: forwards;
+    top: 50%; 
+    color: white;
+    font-weight: bold;
+    text-shadow: grey;
+} 
+  @keyframes pomak {
+    from {top: 0px;}
+    to {top: 200px;}
+  }
+
+
+
+.brands-logo {
+    width: 70%;    
+}
+
+
+
+/***** Kako do nas *****/
+
+.kako-do-nas-background{
+    background-image: url("../images/kakoDoNas.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.kako-do-nas-container{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: normal;
+}
+
+.kako-do-nas-box{
+    background-color: #fcfcfc;
+    width: 400px;
+    text-align: left;
+    margin: 20px;
+    border: 1px solid #ccc;
+    padding-top: 10px;
+    border-radius: 5px;
+}
+
+.kartica h4{
+    margin-left: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    border-bottom: 0;
+}
+
+.kartica p{
+    font-family: 'Arial Narrow', sans-serif;
+    font-weight: 100; /*debljina slova od 100 do 900*/
+    font-size: 15px;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+#mapa{
+    /* width: 40%; */
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+iframe{
+    border-radius: 5px;
+}
+
+
+/***** Ikone *****/
+
+.bi {
+    color: orange;
+    }
+.bi2 {
+    color:rgba(20, 126, 247, 0.658);
+    margin-left: 3px;
+    margin-right: 4px;
+}
+
+.bi3 {
+    color: rgb(165, 42, 42);
+    margin-right: 5px;
+}
+
+/***** Novosti *****/
+
+.news-main-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* poreda dijelove jedan ispod drugog */   
+}
+
+.imageWithText{
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-shadow: 2px 2px 4px #0c0c0c;
+    box-shadow: 0 0 4px 3px rgba(145, 219, 243, 0.5);
+    border-style: solid;    /* prvo treba odrediti border style da bi radilo sve ostalo za border*/
+	border-width: 10px;
+    border-color: #ccc;
+}
+
+#newsImageOne{
+    background-image: url("../images/novost1.jpg");
+}
+
+#newsImageTwo{
+    background-image: url("../images/novost2.jpg");
+}
+
+#newsImageThree{
+    background-image: url("../images/novost3.jpg");
+}
+
+.imageWithText a{
+    text-align: center;
+    font-weight: bold;
+}
+.imageWithText a:link {
+    color: rgb(225, 226, 228);
+    background-color: transparent;
+    text-decoration: none;
+}
+.imageWithText  a:visited {
+    color: rgb(225, 226, 228);
+    background-color: transparent;
+    text-decoration: none;
+}
+.imageWithText a:hover  {
+    color: rgb(225, 226, 228);
+    background-color: transparent;
+    text-decoration: none;
+    
+}
+ 
+.datum-novosti {
+    color: rgb(255, 217, 0);
+}
+
+.news {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(243, 243, 243);
+    padding-bottom: 5%;    
+}
+
+.news .col-lg-4{
+    display: flex;
+    justify-content: center;
+}
+
+.news-main-container footer {
+    height:25%;
+}
+
+@media (max-width: 750px) {
+    .news-main-container footer {
+        height:10%;
+    }
+}
+
+.news-p-text {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: justify;
+    padding: 30px;
+}
+
+
+/**** Novosti 1 ****/
+
+.videoBox{
+    display: flex;
+    justify-content: center;
+}
+
+
+/**** Responzivnost CSS ****/
+
+@media (max-width: 1100px){
+    
+    /*veličina mape u odnosu na širinu ekrana*/
+    iframe {
+        width:80%;
+    }
+
+    .kako-do-nas-container {
+        display: inline-block;
+        width: auto;
+    }
+
+    .kako-do-nas-background {
+        text-align: center;
+    }
+
+    .img-header-container{
+        height: 150px;        
+    }    
+}
